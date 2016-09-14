@@ -7,8 +7,8 @@ after_script:
   - 'istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/codecov'
 notifications:
   email:
-    on_success: always
-    on_failure: always
+    on_success: never
+    on_failure: never
 deploy:
   provider: npm
   email: $EMAIL_ADDRESS
