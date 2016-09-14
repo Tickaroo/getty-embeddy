@@ -1,6 +1,6 @@
 # gettyEmbeddy
 
-[![npm version](https://badge.fury.io/js/gettyEmbeddy.svg)](https://www.npmjs.com/package/gettyEmbeddy) [![Build Status](https://travis-ci.org/Tickaroo/gettyEmbeddy.svg?branch=master)](https://travis-ci.org/Tickaroo/gettyEmbeddy) [![codecov.io](https://codecov.io/github/Tickaroo/gettyEmbeddy/coverage.svg?branch=master)](https://codecov.io/github/Tickaroo/gettyEmbeddy?branch=master)
+[![npm version](https://badge.fury.io/js/GettyEmbeddy.svg)](https://www.npmjs.com/package/GettyEmbeddy) [![Build Status](https://travis-ci.org/Tickaroo/gettyEmbeddy.svg?branch=master)](https://travis-ci.org/Tickaroo/gettyEmbeddy) [![codecov.io](https://codecov.io/github/Tickaroo/gettyEmbeddy/coverage.svg?branch=master)](https://codecov.io/github/Tickaroo/gettyEmbeddy?branch=master)
 
 Embed Gettyimages photos (iFrame) into your website using Gettyimages's native oEmbed endpoint.
 
