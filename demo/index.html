@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8" />
+		<title>GettyEmbeddy</title>
+  </head>
+  <body>
+    <div>
+      <div id="test" data-getty-embeddy-id="83454805">Holder...</div>
+      <div class="js-getty-embeddy-el" data-getty-embeddy-id="604533586">Holder...</div>
+      <div class="js-getty-embeddy-el" data-getty-embeddy-id="604252812">Holder...</div>
+      <div class="js-getty-embeddy-el" data-getty-embeddy-id="603705212">Holder...</div>
+      <div class="js-getty-embeddy-el" data-getty-embeddy-id="603563138">Holder...</div>
+      <div class="js-getty-embeddy-el" data-getty-embeddy-id="603557788">Holder...</div>
+      <div class="js-getty-embeddy-el" data-getty-embeddy-id="603557762">Holder...</div>
+    </div>
+    <script src="../dist/gettyEmbeddy.js"></script>
+    <script>
+      var gettyEmbeddy = new GettyEmbeddy();
+      gettyEmbeddy.embed(document.getElementById('test'));
+      gettyEmbeddy.embedAll();
+    </script>
+  </body>
+</html>

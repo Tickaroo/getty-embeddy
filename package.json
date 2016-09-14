@@ -1,0 +1,45 @@
+{
+  "name": "GettyEmbeddy",
+  "version": "0.0.1",
+  "description": "Embed Gettyimages photos (iFrame) using Oembed.",
+  "homepage": "https://github.com/Tickaroo/gettyEmbeddy",
+  "author": "Ahmed Hassanein <eng.a7mad.gamal@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "gettyimages",
+    "getty",
+    "embed",
+    "oEmbed",
+    "oembed"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/Tickaroo/gettyEmbeddy.git"
+  },
+  "main": "src/index.js",
+  "directories": {
+    "example": "./demo"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "npm run build -- --watch",
+    "test": "mocha",
+    "testdbg": "mocha --debug-brk",
+    "lint": "jshint **.js **/*.js **/**/*.js",
+    "coverage": "istanbul cover node_modules/.bin/_mocha"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "codecov.io": "0.1.6",
+    "istanbul": "0.4.2",
+    "jsdom": "9.4.5",
+    "jshint": "2.9.1",
+    "mocha": "3.0.2",
+    "should": "11.1.0",
+    "webpack": "1.13.1"
+  },
+  "contributors": [{
+    "name": "Anton Pawlik",
+    "email": "anton.pawlik@gmail.com"
+  }]
+}
