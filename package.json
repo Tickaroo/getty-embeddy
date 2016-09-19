@@ -21,12 +21,14 @@
     "example": "./demo"
   },
   "scripts": {
-    "build": "webpack",
-    "watch": "npm run build -- --watch",
+    "build": "npm run lint && npm run test && webpack",
+    "server": "webpack-dev-server --progress --colors",
     "test": "mocha",
+    "testdev": "mocha || exit 0",
     "testdbg": "mocha --debug-brk",
-    "lint": "jshint **.js **/*.js **/**/*.js",
-    "coverage": "istanbul cover node_modules/.bin/_mocha"
+    "lint": "jshint src/*.js test/*.js",
+    "coverage": "istanbul cover node_modules/.bin/_mocha",
+    "release-patch": "npm run build && npm version patch && npm publish && git push --follow-tags"
   },
   "devDependencies": {
     "chai": "3.5.0",
