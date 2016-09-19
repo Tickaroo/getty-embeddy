@@ -1,6 +1,6 @@
 {
   "name": "GettyEmbeddy",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Embed Gettyimages photos (iFrame) using Oembed.",
   "homepage": "https://github.com/Tickaroo/gettyEmbeddy",
   "author": "Ahmed Hassanein <eng.a7mad.gamal@gmail.com>",
