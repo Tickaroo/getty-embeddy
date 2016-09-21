@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var GettyEmbeddy = require('../src/index.js');
+var GettyEmbeddy = require('../src/getty-embeddy.js');
 var jsdomDocument = require('jsdom').jsdom();
 global.document = jsdomDocument;
 global.window = document.defaultView;
@@ -19,7 +19,7 @@ describe('GettyEmbeddy', function () {
     expect(gettyEmbeddy.options.base64loadingImg).to.be.a('string');
     expect(gettyEmbeddy.options.dataAttr).to.eql('getty-embeddy-id');
     expect(gettyEmbeddy.options.selectorClass).to.eql('js-getty-embeddy-el');
-    expect(gettyEmbeddy.options.oembedEndpoint).to.eql('http://embed.gettyimages.com/oembed?url=');
+    expect(gettyEmbeddy.options.oembedEndpoint).to.eql('//embed.gettyimages.com/oembed?url=');
     expect(gettyEmbeddy.options.parentEl).to.deep.equal(jsdomDocument);
     done();
   });

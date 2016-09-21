@@ -1,6 +1,6 @@
   "use strict";
 
-  // gettyEmbeddy.js
+  // getty-embeddy.js
   // Ahmed Hassanein - 2016
 
   /**
@@ -14,7 +14,7 @@
     this.options = {};
     this.embeds = [];
 
-    this.options.oembedEndpoint = options.oembedEndpoint || 'http://embed.gettyimages.com/oembed?url=';
+    this.options.oembedEndpoint = options.oembedEndpoint || '//embed.gettyimages.com/oembed?url=';
     this.options.parentEl = options.parentEl || document;
     this.options.selectorClass = options.selectorClass || 'js-getty-embeddy-el';
     this.options.dataAttr = options.dataAttr || 'getty-embeddy-id';
@@ -47,7 +47,7 @@
           return false;
         }
       }
-      url = this.options.oembedEndpoint + encodeURIComponent('http://www.gettyimages.com/license/' + imageId);
+      url = this.options.oembedEndpoint + encodeURIComponent('//www.gettyimages.com/license/' + imageId);
 
       var embedIndex = this.embeds.push(new XMLHttpRequest());
       embedIndex = embedIndex - 1;

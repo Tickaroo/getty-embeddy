@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.1.0]
+# renamed npm package and git repo to getty-embeddy !
 ### Added
 - using "use strict"
 - added some [JSDoc] (http://usejsdoc.org/) comments

@@ -1,6 +1,6 @@
-# gettyEmbeddy
+# getty-embeddy
 
-[![npm version](https://badge.fury.io/js/GettyEmbeddy.svg)](https://www.npmjs.com/package/GettyEmbeddy) [![Build Status](https://travis-ci.org/Tickaroo/gettyEmbeddy.svg?branch=master)](https://travis-ci.org/Tickaroo/gettyEmbeddy) [![codecov.io](https://codecov.io/github/Tickaroo/gettyEmbeddy/coverage.svg?branch=master)](https://codecov.io/github/Tickaroo/gettyEmbeddy?branch=master)
+[![npm version](https://badge.fury.io/js/getty-embeddy.svg)](https://www.npmjs.com/package/getty-embeddy) [![Build Status](https://travis-ci.org/Tickaroo/getty-embeddy.svg?branch=master)](https://travis-ci.org/Tickaroo/getty-embeddy) [![codecov.io](https://codecov.io/github/Tickaroo/getty-embeddy/coverage.svg?branch=master)](https://codecov.io/github/Tickaroo/getty-embeddy?branch=master)
 
 Embed Gettyimages photos (iFrame) into your website using Gettyimages's native oEmbed endpoint.
 
@@ -19,13 +19,13 @@ However, if you managed to generate the url on the fly, please tell me!
 ## Install
 
 ```bash
-$ npm install --save gettyembeddy
+$ npm install --save getty-embeddy
 ```
 
 ## Usage
 
 ```javascript
-var GettyEmbeddy = require('gettyEmbeddy');
+var GettyEmbeddy = require('getty-embeddy');
 // all options are optional with the default values shown here:
 var gettyEmbeddy = new GettyEmbeddy({
   parent: undefined,                 // undefined to search in whole document, selector or element to use as parent

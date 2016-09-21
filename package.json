@@ -1,8 +1,8 @@
 {
-  "name": "GettyEmbeddy",
+  "name": "getty-embeddy",
   "version": "0.1.0",
   "description": "Embed Gettyimages photos (iFrame) using Oembed.",
-  "homepage": "https://github.com/Tickaroo/gettyEmbeddy",
+  "homepage": "https://github.com/Tickaroo/getty-embeddy",
   "author": "Ahmed Hassanein <eng.a7mad.gamal@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -14,9 +14,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com/Tickaroo/gettyEmbeddy.git"
+    "url": "git@github.com/Tickaroo/getty-embeddy.git"
   },
-  "main": "src/index.js",
+  "main": "src/getty-embeddy.js",
   "directories": {
     "example": "./demo"
   },

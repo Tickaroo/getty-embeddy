@@ -1,7 +1,7 @@
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/getty-embeddy.js',
   output: {
-    filename: 'gettyEmbeddy.js',
+    filename: 'getty-embeddy.js',
     path: './dist',
     library: 'GettyEmbeddy',
     libraryTarget: 'var'
