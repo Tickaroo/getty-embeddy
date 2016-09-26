@@ -28,13 +28,31 @@ $ npm install --save getty-embeddy
 var GettyEmbeddy = require('getty-embeddy');
 // all options are optional with the default values shown here:
 var gettyEmbeddy = new GettyEmbeddy({
-  parent: undefined,                 // undefined to search in whole document, selector or element to use as parent
-  selectorClass: 'js-getty-embeddy-el',  // which class will be processed
-  dataAttr: 'getty-embeddy-id'       // which data attr will hold the GettyImages image id
+  // undefined to search in whole document or an element to use as parent for better performance (recommended!)
+  parentEl: undefined,    
+  // all elements with this class will be processed          
+  selectorClass: 'js-getty-embeddy-el',
+  // which data attr will hold the GettyImages image id
+  dataAttr: 'getty-embeddy-id',
+  //provide another base64 encoded gif loader or false to disable
+  loaderGifBase64: 'data:image/gif;base64,R0lGOD....[a small gif loader encoded in base64]',
+  // a function to run if embedding fails (image was removed or invalid id etc...)
+  // el is the affected element and reason is a string, one of 'no_image_id','invalid_response','connection_error'
+  onLoadFail: function (el, reason) {
+    if (el) {
+      el.innerHTML = '<span>embedding failed, reason: ' + reason + '</span>';
+    }
+  },
+  // the css to use for the loader element
+  defaultOnFailHtml: '<span>embedding failed</span>',
+  // the css to use for the loader element
+  loaderCss: 'margin:auto;display:block;top:50%;position:relative;',
+  // the time (in milliseconds) to delay the embedAll process for better performance, set to 0 to disable
+  embedDelayDuration: 100,
 });
 
-gettyEmbeddy.embedAll();
+gettyEmbeddy.embedAll(); // will scan parentEl for possible embeds and load them (with the 'embedDelayDuration' delay between each embed)
 gettyEmbeddy.embed(el); //will check el's data attributes for dataAttr to get image id
-// gettyEmbeddy.embed(el, gettyId); //TODO
+gettyEmbeddy.embed(el, '604533586'); // you can provide the id directly if the element doesn't have one or if you need to override it
 // gettyEmbeddy.getHtml(gettyId); //TODO
 ```

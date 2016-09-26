@@ -16,10 +16,9 @@ describe('GettyEmbeddy', function () {
   it('doesnt expload in your face', function (done) {
     var gettyEmbeddy = new GettyEmbeddy();
     expect(gettyEmbeddy.embeds).to.be.empty;// jshint ignore:line
-    expect(gettyEmbeddy.options.base64loadingImg).to.be.a('string');
+    expect(gettyEmbeddy.options.loaderGifBase64).to.be.a('string');
     expect(gettyEmbeddy.options.dataAttr).to.eql('getty-embeddy-id');
     expect(gettyEmbeddy.options.selectorClass).to.eql('js-getty-embeddy-el');
-    expect(gettyEmbeddy.options.oembedEndpoint).to.eql('//embed.gettyimages.com/oembed?url=');
     expect(gettyEmbeddy.options.parentEl).to.deep.equal(jsdomDocument);
     done();
   });
