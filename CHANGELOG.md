@@ -5,16 +5,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-# many changes and improvements, few breaking changes
+# getting ready for v 1.0. many changes and improvements.
 
 ### BREAKING CHANGES:
 renamed 'parent' option to 'parentEl' for clarity
+removed unused 'oembedEndpoint' option
 
 ### Added
 - loader image control (src and css)
 - onFail callback with default function
 - custom delay
 - better dev server for the demo page (fastest way to test the options)
+- various console.warn() to help you debug easily
+- smarter loader and failing logic
+- various bugs fixed
 - more! check the readme
 
 ## [0.1.0]
