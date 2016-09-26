@@ -4,6 +4,14 @@ module.exports = {
     filename: 'getty-embeddy.js',
     path: './dist',
     library: 'GettyEmbeddy',
-    libraryTarget: 'var'
+    libraryTarget: 'var',
+    publicPath: '/dist/'
+  },
+  devServer: {
+    // inline: true,
+    progress: true,
+    colors: true,
+    open: true,
+    contentBase: './demo/'
   }
 };
