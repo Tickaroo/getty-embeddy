@@ -83,7 +83,10 @@
         }
       }
       url = '//embed.gettyimages.com/oembed?url=' + encodeURIComponent('//www.gettyimages.com/details/' + imageId);
-
+      if (el.getAttribute('data-getty-embeddy-loaded') !== "true") {
+        el.setAttribute('data-getty-embeddy-loading', 'true');
+        this.startLoader(el);
+      }
       var embedIndex = this.embeds.push(new XMLHttpRequest());
       var embedAjax = this.embeds[embedIndex - 1];
       var _this = this;

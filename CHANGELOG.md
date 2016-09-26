@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+
+## [1.0.2]
+fix a bug to show loaders for embed methods
+
+## [1.0.1]
 # getting ready for v 1.0. many changes and improvements.
 
 ### BREAKING CHANGES:
