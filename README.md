@@ -34,17 +34,20 @@ var gettyEmbeddy = new GettyEmbeddy({
   selectorClass: 'js-getty-embeddy-el',
   // which data attr will hold the GettyImages image id
   dataAttr: 'getty-embeddy-id',
-  //provide another base64 encoded gif loader or false to disable
-  loaderGifBase64: 'data:image/gif;base64,R0lGOD....[a small gif loader encoded in base64]',
+  //provide the src (link) attribute for the loading image or false to disable
+  //any valid src is accepted (url,base64,svg...)
+  loaderImgSrc: 'data:image/gif;base64,R0lGOD....[a small gif loader encoded in base64]',
   // a function to run if embedding fails (image was removed or invalid id etc...)
   // el is the affected element and reason is a string, one of 'no_image_id','invalid_response','connection_error'
   onLoadFail: function (el, reason) {
-    if (el) {
-      el.innerHTML = '<span>embedding failed, reason: ' + reason + '</span>';
+    if (el && reason && this.options.defaultOnFailHtml && this.options.defaultOnFailHtml.replace) {
+      el.innerHTML = this.options.defaultOnFailHtml.replace('__REASON__', reason);
     }
+    console.warn('GettyEmbeddy - onLoadFail was called reason:', reason, ' element:', el);
   },
-  // the css to use for the loader element
-  defaultOnFailHtml: '<span>embedding failed</span>',
+  // if you don't want to provide different onFail function, you can simply change the html here
+  // '__REASON__' will be replaced with the fail reason if found
+  defaultOnFailHtml: '<span>embedding failed reason:__REASON__</span>',
   // the css to use for the loader element
   loaderCss: 'margin:auto;display:block;top:50%;position:relative;',
   // the time (in milliseconds) to delay the embedAll process for better performance, set to 0 to disable

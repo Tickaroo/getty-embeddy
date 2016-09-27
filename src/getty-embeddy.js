@@ -18,10 +18,10 @@
     this.options.dataAttr = options.dataAttr || 'getty-embeddy-id';
     this.options.loaderCss = options.loaderCss || 'margin:auto;display:block;top:50%;position:relative;';
 
-    if (options.loaderGifBase64 === false || typeof options.loaderGifBase64 === 'string') {
-      this.options.loaderGifBase64 = options.loaderGifBase64;
+    if (options.loaderImgSrc === false || typeof options.loaderImgSrc === 'string') {
+      this.options.loaderImgSrc = options.loaderImgSrc;
     } else {
-      this.options.loaderGifBase64 = 'data:image/gif;base64,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'; // jshint ignore:line
+      this.options.loaderImgSrc = 'data:image/gif;base64,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'; // jshint ignore:line
     }
 
     if (typeof options.onLoadFail === 'function') {
@@ -30,13 +30,11 @@
       if (typeof options.defaultOnFailHtml === 'string') {
         this.options.defaultOnFailHtml = options.defaultOnFailHtml;
       } else {
-        this.options.defaultOnFailHtml = '<span>embedding failed</span>';
+        this.options.defaultOnFailHtml = '<span>embedding failed reason:__REASON__</span>';
       }
       this.options.onLoadFail = function (el, reason) {
-        if (el) {
-          el.innerHTML = this.options.defaultOnFailHtml;
-        } else {
-          console.warn('GettyEmbeddy - onLoadFail didn\'t get a valid reason: ', reason, 'element:', el);
+        if (el && reason && this.options.defaultOnFailHtml && this.options.defaultOnFailHtml.replace) {
+          el.innerHTML = this.options.defaultOnFailHtml.replace('__REASON__', reason);
         }
         console.warn('GettyEmbeddy - onLoadFail was called reason:', reason, ' element:', el);
       };
@@ -50,7 +48,7 @@
   }
 
   function embedTimeout(gettyEmbeddy, i, el) {
-    window.setTimeout(
+    setTimeout(
       function () {
         gettyEmbeddy.embed(el);
       },
@@ -87,21 +85,16 @@
         el.setAttribute('data-getty-embeddy-loading', 'true');
         this.startLoader(el);
       }
-      var embedIndex = this.embeds.push(new XMLHttpRequest());
-      var embedAjax = this.embeds[embedIndex - 1];
+      var embedAjax = new XMLHttpRequest();
+      this.embeds.push(embedAjax);
       var _this = this;
-      embedAjax.onreadystatechange = function (e) {
+      embedAjax.onreadystatechange = function () {
         // console.log(imageId, embedAjax.readyState, embedAjax.status);
         var responseText, jsonResponse;
         if (embedAjax.readyState === 4) {
-          if (embedAjax.status === 200) {
+          if (embedAjax.status >= 200 && embedAjax.status < 400) {
             responseText = embedAjax.responseText || '{}';
-            try {
-              jsonResponse = JSON.parse(responseText);
-            } catch (e) {
-              window.alert(e);
-              jsonResponse = {};
-            }
+            jsonResponse = JSON.parse(responseText);
             if (el && jsonResponse && jsonResponse.html) {
               el.innerHTML = jsonResponse.html;
               el.removeAttribute('data-getty-embeddy-loading');
@@ -148,8 +141,8 @@
   };
 
   GettyEmbeddy.prototype.startLoader = function (el) {
-    if (typeof this.options.loaderCss === 'string' && typeof this.options.loaderGifBase64 === 'string') {
-      el.innerHTML = "<img style='" + this.options.loaderCss + "' src='" + this.options.loaderGifBase64 + "'></>";
+    if (typeof this.options.loaderCss === 'string' && typeof this.options.loaderImgSrc === 'string') {
+      el.innerHTML = "<img style='" + this.options.loaderCss + "' src='" + this.options.loaderImgSrc + "'/>";
     }  
   };
 

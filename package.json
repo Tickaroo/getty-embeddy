@@ -21,11 +21,11 @@
     "example": "./demo"
   },
   "scripts": {
-    "build": "npm run lint && npm run test && webpack",
+    "build": "npm run lint && npm run coverage && webpack",
     "server": "webpack-dev-server --progress --colors",
     "test": "mocha",
     "testdev": "mocha || exit 0",
-    "testdbg": "mocha --debug-brk",
+    "testdbg": "webpack && mocha --debug-brk test/index.js && node-inspector",
     "lint": "jshint src/*.js test/*.js",
     "coverage": "istanbul cover node_modules/.bin/_mocha",
     "release-patch": "npm run build && npm version patch && npm publish && git push --follow-tags"
@@ -37,6 +37,7 @@
     "jsdom": "9.4.5",
     "jshint": "2.9.1",
     "mocha": "3.0.2",
+    "node-inspector": "0.12.8",
     "should": "11.1.0",
     "webpack": "1.13.1",
     "webpack-dev-server": "1.16.1"

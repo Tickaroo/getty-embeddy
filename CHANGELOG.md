@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 
+## [1.1.0]
+
+### BREAKING CHANGES:
+renamed 'loaderGifBase64' to 'loaderImgSrc'
+
+### Changed
+- build and testdbg npm tasks improved
+- 'reason' variable in fail message and better default one
+- add more valid http response codes
+
+### Added
+- tests! more coming
+
 ## [1.0.2]
 fix a bug to show loaders for embed methods
 
