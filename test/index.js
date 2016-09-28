@@ -12,7 +12,13 @@
      this.status = options.status || 200;
      this.readyState = options.readyState || 4;
      this.responseText = options.responseText || '{"html":"<div>works</div>"}';
-     this.onreadystatechange();
+     if (options.delay) {
+       setTimeout(function () {
+         this.onreadystatechange();
+       }, options.delay);
+     } else {
+       this.onreadystatechange();
+     }
    };
    return _XMLHttpRequest;
  }
@@ -114,4 +120,32 @@
 
    });
 
+ });
+
+ describe('GettyEmbeddy embed()', function () {
+
+   it('shows loader', function (done) {
+     document = jsdom.jsdom(
+       '  <div id="id1" class="js-getty-embeddy-el" data-getty-embeddy-id="83454805">x</div>' +
+       '  <div id="id3" class="cls1" >no id</div>');
+     global.XMLHttpRequest = xmlReqGen({
+       delay: 200
+     });
+     var gettyEmbeddy = new GettyEmbeddy();
+     gettyEmbeddy.embed(document.getElementById("id1"));
+     expect(document.getElementById("id1").innerHTML).to.contain('<img style="margin:auto;display:block;top:50%;position:rel');
+     expect(document.getElementById("id3").innerHTML).to.contain('no id');
+     done();
+   });
+   
+      it('embeds', function (done) {
+        document = jsdom.jsdom(
+          '  <div id="id1" class="js-getty-embeddy-el" data-getty-embeddy-id="83454805">x</div>' +
+          '  <div id="id3" class="cls1" >no id</div>');
+        var gettyEmbeddy = new GettyEmbeddy();
+        gettyEmbeddy.embed(document.getElementById("id1"));
+        expect(document.getElementById("id1").innerHTML).to.contain('works');
+        expect(document.getElementById("id3").innerHTML).to.contain('no id');
+        done();
+      });
  });
